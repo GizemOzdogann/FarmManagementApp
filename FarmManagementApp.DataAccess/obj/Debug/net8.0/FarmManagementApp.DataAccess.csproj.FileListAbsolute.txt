@@ -1,0 +1,12 @@
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\bin\Debug\net8.0\FarmManagementApp.DataAccess.deps.json
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\bin\Debug\net8.0\FarmManagementApp.DataAccess.dll
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\bin\Debug\net8.0\FarmManagementApp.DataAccess.pdb
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\FarmManagementApp.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\FarmManagementApp.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\FarmManagementApp.DataAccess.AssemblyInfo.cs
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\FarmManagementApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\FarmManagementApp.DataAccess.sourcelink.json
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\FarmManagementApp.DataAccess.dll
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\refint\FarmManagementApp.DataAccess.dll
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\FarmManagementApp.DataAccess.pdb
+C:\Users\ozdog\source\repos\FarmManagementApp.DataAccess\obj\Debug\net8.0\ref\FarmManagementApp.DataAccess.dll
