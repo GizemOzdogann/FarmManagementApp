@@ -29,6 +29,7 @@ namespace FarmManagementApp
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             sidePanel = new Panel();
             salesSubPanel = new Panel();
             SellProductsButton = new Button();
@@ -44,6 +45,8 @@ namespace FarmManagementApp
             AnimalsButton = new Button();
             logoPanel = new Panel();
             logoLabel = new Label();
+            colorDialog1 = new ColorDialog();
+            notifyIcon1 = new NotifyIcon(components);
             sidePanel.SuspendLayout();
             salesSubPanel.SuspendLayout();
             productsSubPanel.SuspendLayout();
@@ -284,12 +287,20 @@ namespace FarmManagementApp
             // 
             logoLabel.AutoSize = true;
             logoLabel.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            logoLabel.Location = new Point(13, 21);
+            logoLabel.Location = new Point(13, 23);
             logoLabel.Margin = new Padding(4, 0, 4, 0);
             logoLabel.Name = "logoLabel";
             logoLabel.Size = new Size(117, 20);
             logoLabel.TabIndex = 0;
             logoLabel.Text = "Farm Manager";
+            // 
+            // colorDialog1
+            // 
+            colorDialog1.Color = Color.DimGray;
+            // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Text = "notifyIcon1";
             // 
             // MainForm
             // 
@@ -331,5 +342,7 @@ namespace FarmManagementApp
         private Button CashStatusButton;
         private Button ProductsButton;
         private Label logoLabel;
+        private ColorDialog colorDialog1;
+        private NotifyIcon notifyIcon1;
     }
 }
