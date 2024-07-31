@@ -18,7 +18,7 @@ namespace FarmManagementApp
             productsSubPanel.Visible = false;
             salesSubPanel.Visible = false;
         }
-        
+
         private void HideSubMenu()
         {
             if (animalsSubPanel.Visible) animalsSubPanel.Visible = false;
@@ -30,12 +30,59 @@ namespace FarmManagementApp
         {
             HideSubMenu();
             if (!subMenu.Visible) subMenu.Visible = true;
-       
+
             else subMenu.Visible = false;
         }
 
+        private void AnimalsButton_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(animalsSubPanel);
+        }
 
+        private void ListAnimalsButton_Click(object sender, EventArgs e)
+        {
+            //...
+            HideSubMenu();
+        }
 
+        private void AddAnimalsButton_Click(object sender, EventArgs e)
+        {
+            //...
+            HideSubMenu();
+        }
+
+        private void ProductsButton_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(productsSubPanel);
+        }
+
+        private void ShowProductsButton_Click(object sender, EventArgs e)
+        {
+            //...
+            HideSubMenu();
+        }
+
+        private void SalesButton_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(salesSubPanel);
+        }
+
+        private void CashStatusButton_Click(object sender, EventArgs e)
+        {
+            //...
+            HideSubMenu();
+        }
+
+        private void SellProductsButton_Click(object sender, EventArgs e)
+        {
+            //...
+            HideSubMenu();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }
