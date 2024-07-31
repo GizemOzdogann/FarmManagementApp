@@ -4,7 +4,15 @@
 #ignore build output files
 *.dll
 *.exe
-*.pdb
+*.cache
+*.ilk
+*.log
+*.obj
+*.user
+*.suo
+*.bak
+*.ncb
+
 
 # User-specific files
 *.rsuser
