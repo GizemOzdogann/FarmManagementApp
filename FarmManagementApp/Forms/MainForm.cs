@@ -41,6 +41,7 @@ namespace FarmManagementApp
             ShowSubMenu(animalsSubPanel);
         }
 
+        #region AnimalsSubMenu
         private void ListAnimalsButton_Click(object sender, EventArgs e)
         {
             //...
@@ -53,10 +54,14 @@ namespace FarmManagementApp
             HideSubMenu();
         }
 
+        #endregion AnimalsSubMenu
+
         private void ProductsButton_Click(object sender, EventArgs e)
         {
             ShowSubMenu(productsSubPanel);
         }
+
+        #region ProductsSubMenu
 
         private void ShowProductsButton_Click(object sender, EventArgs e)
         {
@@ -64,10 +69,14 @@ namespace FarmManagementApp
             HideSubMenu();
         }
 
+        #endregion ProductsSubMenu
+
         private void SalesButton_Click(object sender, EventArgs e)
         {
             ShowSubMenu(salesSubPanel);
         }
+
+        #region SalesSubMenu
 
         private void CashStatusButton_Click(object sender, EventArgs e)
         {
@@ -80,6 +89,8 @@ namespace FarmManagementApp
             //...
             HideSubMenu();
         }
+
+        #endregion SalesSubMenu
 
         private void exitButton_Click(object sender, EventArgs e)
         {
