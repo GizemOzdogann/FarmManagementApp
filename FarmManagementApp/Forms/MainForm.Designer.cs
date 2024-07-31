@@ -65,7 +65,7 @@ namespace FarmManagementApp
             sidePanel.ForeColor = SystemColors.Window;
             sidePanel.Location = new Point(0, 0);
             sidePanel.Name = "sidePanel";
-            sidePanel.Size = new Size(248, 540);
+            sidePanel.Size = new Size(248, 567);
             sidePanel.TabIndex = 0;
             // 
             // salesSubPanel
@@ -94,6 +94,7 @@ namespace FarmManagementApp
             SellProductsButton.Text = "Sell Products";
             SellProductsButton.TextAlign = ContentAlignment.MiddleLeft;
             SellProductsButton.UseVisualStyleBackColor = true;
+            SellProductsButton.Click += SellProductsButton_Click;
             // 
             // CashStatusButton
             // 
@@ -111,6 +112,7 @@ namespace FarmManagementApp
             CashStatusButton.Text = "Cash Status";
             CashStatusButton.TextAlign = ContentAlignment.MiddleLeft;
             CashStatusButton.UseVisualStyleBackColor = true;
+            CashStatusButton.Click += CashStatusButton_Click;
             // 
             // SalesButton
             // 
@@ -127,6 +129,7 @@ namespace FarmManagementApp
             SalesButton.Text = "Sales";
             SalesButton.TextAlign = ContentAlignment.MiddleLeft;
             SalesButton.UseVisualStyleBackColor = true;
+            SalesButton.Click += SalesButton_Click;
             // 
             // productsSubPanel
             // 
@@ -153,6 +156,7 @@ namespace FarmManagementApp
             ShowProductsButton.Text = "Show Product List";
             ShowProductsButton.TextAlign = ContentAlignment.MiddleLeft;
             ShowProductsButton.UseVisualStyleBackColor = true;
+            ShowProductsButton.Click += ShowProductsButton_Click;
             // 
             // ProductsButton
             // 
@@ -169,6 +173,7 @@ namespace FarmManagementApp
             ProductsButton.Text = "Products";
             ProductsButton.TextAlign = ContentAlignment.MiddleLeft;
             ProductsButton.UseVisualStyleBackColor = true;
+            ProductsButton.Click += ProductsButton_Click;
             // 
             // animalsSubPanel
             // 
@@ -196,6 +201,7 @@ namespace FarmManagementApp
             AddAnimalsButton.Text = "Add New Animal";
             AddAnimalsButton.TextAlign = ContentAlignment.MiddleLeft;
             AddAnimalsButton.UseVisualStyleBackColor = true;
+            AddAnimalsButton.Click += AddAnimalsButton_Click;
             // 
             // ListAnimalsButton
             // 
@@ -213,6 +219,7 @@ namespace FarmManagementApp
             ListAnimalsButton.Text = "List Animals";
             ListAnimalsButton.TextAlign = ContentAlignment.MiddleLeft;
             ListAnimalsButton.UseVisualStyleBackColor = true;
+            ListAnimalsButton.Click += ListAnimalsButton_Click;
             // 
             // exitButton
             // 
@@ -220,7 +227,7 @@ namespace FarmManagementApp
             exitButton.FlatAppearance.BorderSize = 0;
             exitButton.FlatStyle = FlatStyle.Flat;
             exitButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            exitButton.Location = new Point(0, 495);
+            exitButton.Location = new Point(0, 522);
             exitButton.Name = "exitButton";
             exitButton.Padding = new Padding(10, 0, 0, 0);
             exitButton.Size = new Size(248, 45);
@@ -228,6 +235,7 @@ namespace FarmManagementApp
             exitButton.Text = "Exit";
             exitButton.TextAlign = ContentAlignment.MiddleLeft;
             exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
             // 
             // AnimalsButton
             // 
@@ -245,6 +253,7 @@ namespace FarmManagementApp
             AnimalsButton.Text = "Animals";
             AnimalsButton.TextAlign = ContentAlignment.MiddleLeft;
             AnimalsButton.UseVisualStyleBackColor = false;
+            AnimalsButton.Click += AnimalsButton_Click;
             // 
             // logoPanel
             // 
@@ -258,7 +267,7 @@ namespace FarmManagementApp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(982, 540);
+            ClientSize = new Size(982, 567);
             Controls.Add(sidePanel);
             ForeColor = SystemColors.Window;
             Name = "MainForm";
