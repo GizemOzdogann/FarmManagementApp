@@ -29,6 +29,21 @@ namespace FarmManagementApp.Forms
             BreedPickComboBox.Items.AddRange(new[] { "Breed A", "Breed B" });
         }
 
+
+
+
+
+
+        private void AddNewAnimal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddNewAnimal_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();

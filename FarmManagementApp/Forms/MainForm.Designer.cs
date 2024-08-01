@@ -306,7 +306,7 @@ namespace FarmManagementApp
             // 
             AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1228, 551);
+            ClientSize = new Size(1067, 551);
             Controls.Add(sidePanel);
             Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.Window;
