@@ -39,12 +39,7 @@
             ProductNameLabel = new Label();
             ChooseAnimalLabel = new Label();
             label2 = new Label();
-            ChooseBreedLabel = new Label();
-            BreedPickComboBox = new ComboBox();
             ChooseAgeLabel = new Label();
-            GenderPick = new Label();
-            FemaleGenderPick = new RadioButton();
-            MaleGenderPick = new RadioButton();
             SaveButton = new Button();
             AnimalPickComboBox = new ComboBox();
             AgePickComboBox = new ComboBox();
@@ -74,7 +69,7 @@
             AgePickComboBox.IntegralHeight = false;
             AgePickComboBox.ItemHeight = 20;
             AgePickComboBox.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25" });
-            AgePickComboBox.Location = new Point(211, 158);
+            AgePickComboBox.Location = new Point(211, 116);
             AgePickComboBox.Name = "AgePickComboBox";
             AgePickComboBox.Size = new Size(169, 28);
             AgePickComboBox.TabIndex = 3;
@@ -159,80 +154,22 @@
             label2.Size = new Size(0, 18);
             label2.TabIndex = 5;
             // 
-            // ChooseBreedLabel
-            // 
-            ChooseBreedLabel.AutoSize = true;
-            ChooseBreedLabel.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ChooseBreedLabel.ForeColor = SystemColors.WindowFrame;
-            ChooseBreedLabel.Location = new Point(104, 118);
-            ChooseBreedLabel.Name = "ChooseBreedLabel";
-            ChooseBreedLabel.Size = new Size(101, 20);
-            ChooseBreedLabel.TabIndex = 6;
-            ChooseBreedLabel.Text = "Choose Breed";
-            // 
-            // BreedPickComboBox
-            // 
-            BreedPickComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            BreedPickComboBox.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BreedPickComboBox.FormattingEnabled = true;
-            BreedPickComboBox.Location = new Point(211, 115);
-            BreedPickComboBox.Name = "BreedPickComboBox";
-            BreedPickComboBox.Size = new Size(169, 28);
-            BreedPickComboBox.TabIndex = 2;
-            // 
             // ChooseAgeLabel
             // 
             ChooseAgeLabel.AutoSize = true;
             ChooseAgeLabel.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ChooseAgeLabel.ForeColor = SystemColors.WindowFrame;
-            ChooseAgeLabel.Location = new Point(169, 161);
+            ChooseAgeLabel.Location = new Point(169, 119);
             ChooseAgeLabel.Name = "ChooseAgeLabel";
             ChooseAgeLabel.Size = new Size(36, 20);
             ChooseAgeLabel.TabIndex = 9;
             ChooseAgeLabel.Text = "Age";
             // 
-            // GenderPick
-            // 
-            GenderPick.AutoSize = true;
-            GenderPick.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            GenderPick.ForeColor = SystemColors.WindowFrame;
-            GenderPick.Location = new Point(148, 204);
-            GenderPick.Name = "GenderPick";
-            GenderPick.Size = new Size(57, 20);
-            GenderPick.TabIndex = 10;
-            GenderPick.Text = "Gender";
-            // 
-            // FemaleGenderPick
-            // 
-            FemaleGenderPick.AutoSize = true;
-            FemaleGenderPick.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FemaleGenderPick.ForeColor = SystemColors.WindowFrame;
-            FemaleGenderPick.Location = new Point(211, 232);
-            FemaleGenderPick.Name = "FemaleGenderPick";
-            FemaleGenderPick.Size = new Size(78, 24);
-            FemaleGenderPick.TabIndex = 11;
-            FemaleGenderPick.TabStop = true;
-            FemaleGenderPick.Text = "Female";
-            FemaleGenderPick.UseVisualStyleBackColor = true;
-            // 
-            // MaleGenderPick
-            // 
-            MaleGenderPick.AutoSize = true;
-            MaleGenderPick.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MaleGenderPick.ForeColor = SystemColors.WindowFrame;
-            MaleGenderPick.Location = new Point(211, 202);
-            MaleGenderPick.Name = "MaleGenderPick";
-            MaleGenderPick.Size = new Size(63, 24);
-            MaleGenderPick.TabIndex = 12;
-            MaleGenderPick.TabStop = true;
-            MaleGenderPick.Text = "Male";
-            MaleGenderPick.UseVisualStyleBackColor = true;
-            // 
             // SaveButton
             // 
             SaveButton.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SaveButton.ForeColor = SystemColors.WindowFrame;
-            SaveButton.Location = new Point(211, 274);
+            SaveButton.Location = new Point(211, 218);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(115, 29);
             SaveButton.TabIndex = 13;
@@ -246,13 +183,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(900, 405);
             Controls.Add(SaveButton);
-            Controls.Add(MaleGenderPick);
-            Controls.Add(FemaleGenderPick);
-            Controls.Add(GenderPick);
             Controls.Add(AgePickComboBox);
             Controls.Add(ChooseAgeLabel);
-            Controls.Add(BreedPickComboBox);
-            Controls.Add(ChooseBreedLabel);
             Controls.Add(label2);
             Controls.Add(ChooseAnimalLabel);
             Controls.Add(AnimalPickComboBox);
@@ -279,13 +211,8 @@
         private ComboBox AnimalPickComboBox;
         private Label ChooseAnimalLabel;
         private Label label2;
-        private Label ChooseBreedLabel;
-        private ComboBox BreedPickComboBox;
         private Label ChooseAgeLabel;
         private Label PageLabel;
-        private Label GenderPick;
-        private RadioButton FemaleGenderPick;
-        private RadioButton MaleGenderPick;
         private Button SaveButton;
         private Button exitButton;
     }
