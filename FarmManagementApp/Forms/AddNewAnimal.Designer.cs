@@ -262,7 +262,6 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "AddNewAnimal";
             StartPosition = FormStartPosition.CenterScreen;
-            Load += AddNewAnimal_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             contextMenuStrip1.ResumeLayout(false);
