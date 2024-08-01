@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ozdog\\source\\repos\\FarmManagementApp.DataAccess\\FarmManagementApp.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\ozdog\\Source\\Repos\\FarmManagementApp\\FarmManagementApp.DataAccess\\FarmManagementApp.DataAccess.csproj",
       "projectName": "FarmManagementApp.DataAccess",
-      "projectPath": "C:\\Users\\ozdog\\source\\repos\\FarmManagementApp.DataAccess\\FarmManagementApp.DataAccess.csproj",
+      "projectPath": "C:\\Users\\ozdog\\Source\\Repos\\FarmManagementApp\\FarmManagementApp.DataAccess\\FarmManagementApp.DataAccess.csproj",
       "packagesPath": "C:\\Users\\ozdog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ozdog\\source\\repos\\FarmManagementApp.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\ozdog\\Source\\Repos\\FarmManagementApp\\FarmManagementApp.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ozdog\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ozdog\\source\\repos\\FarmManagementApp.BusinessLogic\\FarmManagementApp.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\ozdog\\Source\\Repos\\FarmManagementApp\\FarmManagementApp.BusinessLogic\\FarmManagementApp.BusinessLogic.csproj",
       "projectName": "FarmManagementApp.BusinessLogic",
-      "projectPath": "C:\\Users\\ozdog\\source\\repos\\FarmManagementApp.BusinessLogic\\FarmManagementApp.BusinessLogic.csproj",
+      "projectPath": "C:\\Users\\ozdog\\Source\\Repos\\FarmManagementApp\\FarmManagementApp.BusinessLogic\\FarmManagementApp.BusinessLogic.csproj",
       "packagesPath": "C:\\Users\\ozdog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ozdog\\source\\repos\\FarmManagementApp.BusinessLogic\\obj\\",
+      "outputPath": "C:\\Users\\ozdog\\Source\\Repos\\FarmManagementApp\\FarmManagementApp.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ozdog\\AppData\\Roaming\\NuGet\\NuGet.Config",
