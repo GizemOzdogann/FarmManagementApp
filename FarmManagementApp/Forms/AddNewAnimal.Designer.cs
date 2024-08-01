@@ -29,22 +29,94 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            ComboBox AnimalPickComboBox;
+            ComboBox AgePickComboBox;
             panel1 = new Panel();
+            exitButton = new Button();
+            PageLabel = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
             toolStripMenuItem1 = new ToolStripMenuItem();
             ProductNameLabel = new Label();
-            AnimalPickButton = new ComboBox();
+            ChooseAnimalLabel = new Label();
+            label2 = new Label();
+            ChooseBreedLabel = new Label();
+            BreedPickComboBox = new ComboBox();
+            ChooseAgeLabel = new Label();
+            GenderPick = new Label();
+            FemaleGenderPick = new RadioButton();
+            MaleGenderPick = new RadioButton();
+            SaveButton = new Button();
+            AnimalPickComboBox = new ComboBox();
+            AgePickComboBox = new ComboBox();
+            panel1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
+            // 
+            // AnimalPickComboBox
+            // 
+            AnimalPickComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            AnimalPickComboBox.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AnimalPickComboBox.FormattingEnabled = true;
+            AnimalPickComboBox.ImeMode = ImeMode.On;
+            AnimalPickComboBox.IntegralHeight = false;
+            AnimalPickComboBox.ItemHeight = 20;
+            AnimalPickComboBox.Location = new Point(211, 72);
+            AnimalPickComboBox.Name = "AnimalPickComboBox";
+            AnimalPickComboBox.Size = new Size(169, 28);
+            AnimalPickComboBox.TabIndex = 1;
+            // 
+            // AgePickComboBox
+            // 
+            AgePickComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            AgePickComboBox.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AgePickComboBox.FormattingEnabled = true;
+            AgePickComboBox.ImeMode = ImeMode.On;
+            AgePickComboBox.IntegralHeight = false;
+            AgePickComboBox.ItemHeight = 20;
+            AgePickComboBox.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25" });
+            AgePickComboBox.Location = new Point(211, 158);
+            AgePickComboBox.Name = "AgePickComboBox";
+            AgePickComboBox.Size = new Size(169, 28);
+            AgePickComboBox.TabIndex = 3;
             // 
             // panel1
             // 
             panel1.BackColor = Color.RoyalBlue;
+            panel1.Controls.Add(exitButton);
+            panel1.Controls.Add(PageLabel);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 39);
+            panel1.Size = new Size(900, 35);
             panel1.TabIndex = 0;
+            // 
+            // exitButton
+            // 
+            exitButton.FlatAppearance.BorderSize = 0;
+            exitButton.FlatStyle = FlatStyle.Flat;
+            exitButton.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            exitButton.ForeColor = SystemColors.ControlLightLight;
+            exitButton.Location = new Point(827, 3);
+            exitButton.Margin = new Padding(4, 3, 4, 3);
+            exitButton.Name = "exitButton";
+            exitButton.Padding = new Padding(12, 0, 0, 0);
+            exitButton.Size = new Size(73, 29);
+            exitButton.TabIndex = 14;
+            exitButton.Text = "Exit";
+            exitButton.TextAlign = ContentAlignment.MiddleLeft;
+            exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
+            // 
+            // PageLabel
+            // 
+            PageLabel.AutoSize = true;
+            PageLabel.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PageLabel.ForeColor = SystemColors.HighlightText;
+            PageLabel.Location = new Point(12, 9);
+            PageLabel.Name = "PageLabel";
+            PageLabel.Size = new Size(132, 20);
+            PageLabel.TabIndex = 10;
+            PageLabel.Text = "Add New Animal";
             // 
             // contextMenuStrip1
             // 
@@ -62,29 +134,137 @@
             // ProductNameLabel
             // 
             ProductNameLabel.AutoSize = true;
-            ProductNameLabel.Location = new Point(12, 77);
+            ProductNameLabel.Location = new Point(14, 69);
             ProductNameLabel.Name = "ProductNameLabel";
-            ProductNameLabel.Size = new Size(0, 20);
+            ProductNameLabel.Size = new Size(0, 18);
             ProductNameLabel.TabIndex = 2;
             // 
-            // AnimalPickButton
+            // ChooseAnimalLabel
             // 
-            AnimalPickButton.FormattingEnabled = true;
-            AnimalPickButton.Items.AddRange(new object[] { "Cow", "Chicken", "Sheep" });
-            AnimalPickButton.Location = new Point(36, 112);
-            AnimalPickButton.Name = "AnimalPickButton";
-            AnimalPickButton.Size = new Size(151, 28);
-            AnimalPickButton.TabIndex = 3;
+            ChooseAnimalLabel.AutoSize = true;
+            ChooseAnimalLabel.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ChooseAnimalLabel.ForeColor = SystemColors.WindowFrame;
+            ChooseAnimalLabel.Location = new Point(60, 75);
+            ChooseAnimalLabel.Name = "ChooseAnimalLabel";
+            ChooseAnimalLabel.Size = new Size(145, 20);
+            ChooseAnimalLabel.TabIndex = 4;
+            ChooseAnimalLabel.Text = "Choose Animal Type";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = SystemColors.WindowFrame;
+            label2.Location = new Point(264, 52);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 18);
+            label2.TabIndex = 5;
+            // 
+            // ChooseBreedLabel
+            // 
+            ChooseBreedLabel.AutoSize = true;
+            ChooseBreedLabel.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ChooseBreedLabel.ForeColor = SystemColors.WindowFrame;
+            ChooseBreedLabel.Location = new Point(104, 118);
+            ChooseBreedLabel.Name = "ChooseBreedLabel";
+            ChooseBreedLabel.Size = new Size(101, 20);
+            ChooseBreedLabel.TabIndex = 6;
+            ChooseBreedLabel.Text = "Choose Breed";
+            // 
+            // BreedPickComboBox
+            // 
+            BreedPickComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            BreedPickComboBox.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BreedPickComboBox.FormattingEnabled = true;
+            BreedPickComboBox.Location = new Point(211, 115);
+            BreedPickComboBox.Name = "BreedPickComboBox";
+            BreedPickComboBox.Size = new Size(169, 28);
+            BreedPickComboBox.TabIndex = 2;
+            // 
+            // ChooseAgeLabel
+            // 
+            ChooseAgeLabel.AutoSize = true;
+            ChooseAgeLabel.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ChooseAgeLabel.ForeColor = SystemColors.WindowFrame;
+            ChooseAgeLabel.Location = new Point(169, 161);
+            ChooseAgeLabel.Name = "ChooseAgeLabel";
+            ChooseAgeLabel.Size = new Size(36, 20);
+            ChooseAgeLabel.TabIndex = 9;
+            ChooseAgeLabel.Text = "Age";
+            // 
+            // GenderPick
+            // 
+            GenderPick.AutoSize = true;
+            GenderPick.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            GenderPick.ForeColor = SystemColors.WindowFrame;
+            GenderPick.Location = new Point(148, 204);
+            GenderPick.Name = "GenderPick";
+            GenderPick.Size = new Size(57, 20);
+            GenderPick.TabIndex = 10;
+            GenderPick.Text = "Gender";
+            // 
+            // FemaleGenderPick
+            // 
+            FemaleGenderPick.AutoSize = true;
+            FemaleGenderPick.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FemaleGenderPick.ForeColor = SystemColors.WindowFrame;
+            FemaleGenderPick.Location = new Point(211, 232);
+            FemaleGenderPick.Name = "FemaleGenderPick";
+            FemaleGenderPick.Size = new Size(78, 24);
+            FemaleGenderPick.TabIndex = 11;
+            FemaleGenderPick.TabStop = true;
+            FemaleGenderPick.Text = "Female";
+            FemaleGenderPick.UseVisualStyleBackColor = true;
+            // 
+            // MaleGenderPick
+            // 
+            MaleGenderPick.AutoSize = true;
+            MaleGenderPick.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MaleGenderPick.ForeColor = SystemColors.WindowFrame;
+            MaleGenderPick.Location = new Point(211, 202);
+            MaleGenderPick.Name = "MaleGenderPick";
+            MaleGenderPick.Size = new Size(63, 24);
+            MaleGenderPick.TabIndex = 12;
+            MaleGenderPick.TabStop = true;
+            MaleGenderPick.Text = "Male";
+            MaleGenderPick.UseVisualStyleBackColor = true;
+            // 
+            // SaveButton
+            // 
+            SaveButton.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SaveButton.ForeColor = SystemColors.WindowFrame;
+            SaveButton.Location = new Point(211, 274);
+            SaveButton.Name = "SaveButton";
+            SaveButton.Size = new Size(115, 29);
+            SaveButton.TabIndex = 13;
+            SaveButton.Text = "Save";
+            SaveButton.TextAlign = ContentAlignment.BottomCenter;
+            SaveButton.UseVisualStyleBackColor = true;
             // 
             // AddNewAnimal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(AnimalPickButton);
+            ClientSize = new Size(900, 405);
+            Controls.Add(SaveButton);
+            Controls.Add(MaleGenderPick);
+            Controls.Add(FemaleGenderPick);
+            Controls.Add(GenderPick);
+            Controls.Add(AgePickComboBox);
+            Controls.Add(ChooseAgeLabel);
+            Controls.Add(BreedPickComboBox);
+            Controls.Add(ChooseBreedLabel);
+            Controls.Add(label2);
+            Controls.Add(ChooseAnimalLabel);
+            Controls.Add(AnimalPickComboBox);
             Controls.Add(ProductNameLabel);
             Controls.Add(panel1);
+            Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "AddNewAnimal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Load += AddNewAnimal_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -96,6 +276,17 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private Label ProductNameLabel;
-        private ComboBox AnimalPickButton;
+        private ComboBox AnimalPickComboBox;
+        private Label ChooseAnimalLabel;
+        private Label label2;
+        private Label ChooseBreedLabel;
+        private ComboBox BreedPickComboBox;
+        private Label ChooseAgeLabel;
+        private Label PageLabel;
+        private Label GenderPick;
+        private RadioButton FemaleGenderPick;
+        private RadioButton MaleGenderPick;
+        private Button SaveButton;
+        private Button exitButton;
     }
 }
