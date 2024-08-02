@@ -79,7 +79,7 @@ namespace FarmManagementApp
             salesSubPanel.Controls.Add(SellProductsButton);
             salesSubPanel.Controls.Add(CashStatusButton);
             salesSubPanel.Dock = DockStyle.Top;
-            salesSubPanel.Location = new Point(0, 348);
+            salesSubPanel.Location = new Point(0, 328);
             salesSubPanel.Margin = new Padding(4, 3, 4, 3);
             salesSubPanel.Name = "salesSubPanel";
             salesSubPanel.Size = new Size(211, 98);
@@ -130,7 +130,7 @@ namespace FarmManagementApp
             SalesButton.FlatStyle = FlatStyle.Flat;
             SalesButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             SalesButton.ForeColor = SystemColors.Window;
-            SalesButton.Location = new Point(0, 300);
+            SalesButton.Location = new Point(0, 280);
             SalesButton.Margin = new Padding(4, 3, 4, 3);
             SalesButton.Name = "SalesButton";
             SalesButton.Padding = new Padding(12, 0, 0, 0);
@@ -145,7 +145,7 @@ namespace FarmManagementApp
             // 
             productsSubPanel.Controls.Add(ShowProductsButton);
             productsSubPanel.Dock = DockStyle.Top;
-            productsSubPanel.Location = new Point(0, 252);
+            productsSubPanel.Location = new Point(0, 232);
             productsSubPanel.Margin = new Padding(4, 3, 4, 3);
             productsSubPanel.Name = "productsSubPanel";
             productsSubPanel.Size = new Size(211, 48);
@@ -177,7 +177,7 @@ namespace FarmManagementApp
             ProductsButton.FlatStyle = FlatStyle.Flat;
             ProductsButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             ProductsButton.ForeColor = SystemColors.Window;
-            ProductsButton.Location = new Point(0, 204);
+            ProductsButton.Location = new Point(0, 184);
             ProductsButton.Margin = new Padding(4, 3, 4, 3);
             ProductsButton.Name = "ProductsButton";
             ProductsButton.Padding = new Padding(12, 0, 0, 0);
@@ -193,7 +193,7 @@ namespace FarmManagementApp
             animalsSubPanel.Controls.Add(AddAnimalsButton);
             animalsSubPanel.Controls.Add(ListAnimalsButton);
             animalsSubPanel.Dock = DockStyle.Top;
-            animalsSubPanel.Location = new Point(0, 106);
+            animalsSubPanel.Location = new Point(0, 86);
             animalsSubPanel.Margin = new Padding(4, 3, 4, 3);
             animalsSubPanel.Name = "animalsSubPanel";
             animalsSubPanel.Size = new Size(211, 98);
@@ -262,7 +262,7 @@ namespace FarmManagementApp
             AnimalsButton.FlatStyle = FlatStyle.Flat;
             AnimalsButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             AnimalsButton.ForeColor = SystemColors.Window;
-            AnimalsButton.Location = new Point(0, 58);
+            AnimalsButton.Location = new Point(0, 38);
             AnimalsButton.Margin = new Padding(4, 3, 4, 3);
             AnimalsButton.Name = "AnimalsButton";
             AnimalsButton.Padding = new Padding(12, 0, 0, 0);
@@ -280,14 +280,14 @@ namespace FarmManagementApp
             logoPanel.Location = new Point(0, 0);
             logoPanel.Margin = new Padding(4, 3, 4, 3);
             logoPanel.Name = "logoPanel";
-            logoPanel.Size = new Size(211, 58);
+            logoPanel.Size = new Size(211, 38);
             logoPanel.TabIndex = 0;
             // 
             // logoLabel
             // 
             logoLabel.AutoSize = true;
             logoLabel.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            logoLabel.Location = new Point(13, 23);
+            logoLabel.Location = new Point(13, 9);
             logoLabel.Margin = new Padding(4, 0, 4, 0);
             logoLabel.Name = "logoLabel";
             logoLabel.Size = new Size(117, 20);
