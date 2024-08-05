@@ -18,3 +18,5 @@ namespace FarmManagementApp
         }
     }
 }
+
+// dependency injection in form applications

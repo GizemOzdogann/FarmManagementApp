@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace FarmManagementApp.Data
 {
+    // crud 
     public class AnimalService
     {
         private List<IAnimal> animals = new List<IAnimal>();

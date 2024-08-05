@@ -1,4 +1,6 @@
 using System.Drawing.Text;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace FarmManagementApp
 {
@@ -8,6 +10,16 @@ namespace FarmManagementApp
         {
             InitializeComponent();
             CustomizeDesign();
+        }
+
+        SqlConnection conn = new("Data Source=GIZEM\\SQLEXPRESS;Integrated Security=True; Initial Catalog=FarmDatabase");
+        
+        public void DisplayData(string data)
+        {
+            SqlDataAdapter adapter = new(data,conn);
+            DataSet dataSet = new();
+            adapter.Fill(dataSet);
+        
         }
 
         private void MainForm_Load(object sender, EventArgs e)

@@ -11,7 +11,7 @@
         "projectName": "FarmManagementApp.DataAccess",
         "projectPath": "C:\\Users\\ozdog\\source\\repos\\FarmManagementApp\\FarmManagementApp.DataAccess\\FarmManagementApp.DataAccess.csproj",
         "packagesPath": "C:\\Users\\ozdog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ozdog\\Source\\Repos\\FarmManagementApp\\FarmManagementApp.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\ozdog\\source\\repos\\FarmManagementApp\\FarmManagementApp.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ozdog\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
