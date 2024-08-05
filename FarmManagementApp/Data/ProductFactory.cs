@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static FarmManagementApp.Data.ProductFactory;
+//using static FarmManagementApp.Data.ProductFactory;
 
 namespace FarmManagementApp.Data
 {
@@ -13,6 +13,13 @@ namespace FarmManagementApp.Data
         Meat,
         Milk
     }
+
+    public interface IProduct
+    {
+        ProductTypes Type { get; }
+        int Price { get; }
+    }
+
     public static class ProductFactory
     {
         public static IProduct CreateProduct(ProductTypes type)
@@ -77,7 +84,6 @@ namespace FarmManagementApp.Data
 
         public Egg()
         {
-
             Price = 30;
             Type = ProductTypes.Egg;
         }

@@ -8,7 +8,6 @@ using System.Xml.Linq;
 
 namespace FarmManagementApp.Data
 {
-
     public enum AnimalTypes
     {
         Cow, 
@@ -16,20 +15,21 @@ namespace FarmManagementApp.Data
         Sheep
     }
 
-    
     public static class AnimalFactory 
     {
-        public static IAnimal CreateAnimal(AnimalTypes type)
+        public static IAnimal CreateAnimal(AnimalTypes type) => type switch
         {
-            return type switch
-            {
-                AnimalTypes.Cow => new Cow(),
-                AnimalTypes.Chicken => new Chicken(),
-                AnimalTypes.Sheep => new Sheep(),
-                _ => throw new ArgumentException($"Invalid Animal Type, {type}"),
-            };
-        }
+            AnimalTypes.Cow => new Cow(),
+            AnimalTypes.Chicken => new Chicken(),
+            AnimalTypes.Sheep => new Sheep(),
+            _ => throw new ArgumentException($"Invalid Animal Type, {type}"),
+        };
+    }
 
+    public interface IAnimal
+    {
+        int LifeSpan { get; }
+        void ProduceProduct();
     }
 
     public abstract class Animal : IAnimal
@@ -41,24 +41,11 @@ namespace FarmManagementApp.Data
         }
     }
 
-    #region Interfaces
-    public interface IAnimal
-    {
-        void ProduceProduct();
-    }
-    public interface IProduct
-    {
-        ProductTypes Type { get; }
-        int Price { get; }
-    }
-    #endregion Interfaces
-
-
     #region Animals
 
     public class Cow : Animal
     {
-        public override int LifeSpan => base.LifeSpan;
+        public override int LifeSpan => 20;
 
         public IProduct ProduceMilk()
         {
@@ -74,13 +61,11 @@ namespace FarmManagementApp.Data
             Console.WriteLine("Cow produces Milk and Meat.");
         }
     }
+
     public class Chicken : Animal
     {
-        
-        public IProduct ProduceEggs()
-        {
-            return new Egg(); 
-        }
+        public override int LifeSpan => 10;
+
         public IProduct ProduceMeat()
         {
             return new Meat(); 
@@ -89,10 +74,16 @@ namespace FarmManagementApp.Data
         {
             Console.WriteLine("Chicken produces Eggs and Meat.");
         }
+
+        public override string? ToString()
+        {
+            return base.ToString();
+        }
     }
+
     public class Sheep : Animal
     {
-        
+        public override int LifeSpan => 15;
         public IProduct ProduceMeat()
         {
             return new Meat(); 
@@ -104,5 +95,4 @@ namespace FarmManagementApp.Data
     }
 
     #endregion Animals
-
 }

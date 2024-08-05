@@ -14,6 +14,10 @@ namespace FarmManagementApp.Data
             AnimalFactory.CreateAnimal(AnimalTypes.Cow);
             AnimalFactory.CreateAnimal(AnimalTypes.Chicken);
             AnimalFactory.CreateAnimal(AnimalTypes.Sheep);
+
+            ProductFactory.CreateProduct(ProductTypes.Meat);
+            ProductFactory.CreateProduct(ProductTypes.Milk);
+            ProductFactory.CreateProduct(ProductTypes.Egg);
         }
     }
 }
