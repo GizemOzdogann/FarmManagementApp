@@ -24,16 +24,7 @@ namespace FarmManagementApp.Forms
         {
             AnimalPickComboBox.Items.AddRange(new[] { "Cow", "Sheep", "Chicken" });
         }
-        private void InitializeBreedPickComboBox()
-        {
-            BreedPickComboBox.Items.AddRange(new[] { "Breed A", "Breed B" });
-        }
-
-
-
-
-
-
+        
         private void AddNewAnimal_Load(object sender, EventArgs e)
         {
 
