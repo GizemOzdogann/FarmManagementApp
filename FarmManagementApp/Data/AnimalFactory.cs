@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+//using static FarmManagementApp.Data.ProductFactory;
 
 namespace FarmManagementApp.Data
 {
@@ -15,12 +16,7 @@ namespace FarmManagementApp.Data
         Sheep
     }
 
-    public enum ProductTypes
-    {
-        Egg,
-        Meat,
-        Milk
-    }
+    
     public static class AnimalFactory 
     {
         public static IAnimal CreateAnimal(AnimalTypes type)
@@ -30,7 +26,7 @@ namespace FarmManagementApp.Data
                 AnimalTypes.Cow => new Cow(),
                 AnimalTypes.Chicken => new Chicken(),
                 AnimalTypes.Sheep => new Sheep(),
-                _ => throw new ArgumentException("Invalid Animal Type", nameof(type)),
+                _ => throw new ArgumentException($"Invalid Animal Type, {type}"),
             };
         }
 
@@ -57,59 +53,6 @@ namespace FarmManagementApp.Data
     }
     #endregion Interfaces
 
-    #region Products
-
-    public class Meat : IProduct
-    {
-        public ProductTypes Type { get; set; }
-        public int Price { get;  set; }
-
-        public Meat(int price)
-        {
-            Type = ProductTypes.Meat;
-            Price = price;
-        }
-
-        public void CreateProduct()
-        {
-            Console.WriteLine(nameof(Type), "Produced");
-        }
-    }
-    public class Milk : IProduct
-    {
-        public ProductTypes Type { get; set; }
-        public int Price { get; set; } 
-        public Milk(int price)
-        {
-            Type = ProductTypes.Milk;
-            Price = price;
-        }
-
-        public void CreateProduct()
-        {
-            Console.WriteLine(nameof(Type), "Produced");
-        }
-    }
-    public class Egg : IProduct
-    {
-        public ProductTypes Type {get; set;} 
-        public int Price { get; private set; }
-
-
-        public Egg(int price) 
-        {
-            
-            Price = price;
-            Type = ProductTypes.Egg;
-        }
-
-        public void CreateProduct()
-        {
-            Console.WriteLine(nameof(Type), "Produced");
-        }
-    }
-
-    #endregion Products
 
     #region Animals
 
