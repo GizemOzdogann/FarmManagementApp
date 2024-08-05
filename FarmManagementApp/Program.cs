@@ -15,7 +15,6 @@ namespace FarmManagementApp
             //Application.Run(new MainForm());
             Application.Run(new AddNewAnimal());
 
-
         }
     }
 }

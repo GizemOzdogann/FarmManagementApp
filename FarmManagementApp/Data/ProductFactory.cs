@@ -15,18 +15,18 @@ namespace FarmManagementApp.Data
     }
     public static class ProductFactory
     {
-        public static IProduct CreateProduct(ProductTypes type, int price)
+        public static IProduct CreateProduct(ProductTypes type)
         {
             switch (type)
             {
                 case ProductTypes.Meat:
-                    return new Meat(price);
+                    return new Meat();
 
                 case ProductTypes.Milk:
-                    return new Milk(price);
+                    return new Milk();
 
                 case ProductTypes.Egg:
-                    return new Egg(price);
+                    return new Egg();
 
                 default:
                     throw new ArgumentException("Invalid product type");
@@ -34,17 +34,19 @@ namespace FarmManagementApp.Data
         }
 
     }
+
+
     #region Products
 
     public class Meat : IProduct
     {
         public ProductTypes Type { get; }
-        public int Price { get; set; }
+        public int Price { get; }
 
-        public Meat(int price)
+        public Meat()
         {
             Type = ProductTypes.Meat;
-            Price = price;
+            Price = 100;
         }
 
         public void CreateProduct()
@@ -55,11 +57,11 @@ namespace FarmManagementApp.Data
     public class Milk : IProduct
     {
         public ProductTypes Type { get; }
-        public int Price { get; set; }
-        public Milk(int price)
+        public int Price { get;  }
+        public Milk()
         {
             Type = ProductTypes.Milk;
-            Price = price;
+            Price = 50;
         }
 
         public void CreateProduct()
@@ -70,13 +72,13 @@ namespace FarmManagementApp.Data
     public class Egg : IProduct
     {
         public ProductTypes Type { get; }
-        public int Price { get; set; }
+        public int Price { get; }
 
 
-        public Egg(int price)
+        public Egg()
         {
 
-            Price = price;
+            Price = 30;
             Type = ProductTypes.Egg;
         }
 

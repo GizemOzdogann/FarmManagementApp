@@ -62,12 +62,12 @@ namespace FarmManagementApp.Data
 
         public IProduct ProduceMilk()
         {
-            return new Milk(new Random().Next(5, 15)); 
+            return new Milk(); 
         }
 
         public IProduct ProduceMeat()
         {
-            return new Meat(new Random().Next(20, 50)); 
+            return new Meat(); 
         }
         public override void ProduceProduct()
         {
@@ -79,11 +79,11 @@ namespace FarmManagementApp.Data
         
         public IProduct ProduceEggs()
         {
-            return new Egg(new Random().Next(1, 10)); 
+            return new Egg(); 
         }
         public IProduct ProduceMeat()
         {
-            return new Meat(new Random().Next(5, 15)); 
+            return new Meat(); 
         }
         public override void ProduceProduct()
         {
@@ -95,7 +95,7 @@ namespace FarmManagementApp.Data
         
         public IProduct ProduceMeat()
         {
-            return new Meat(new Random().Next(15, 30)); 
+            return new Meat(); 
         }
         public override void ProduceProduct()
         {
