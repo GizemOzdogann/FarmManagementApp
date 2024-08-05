@@ -15,6 +15,12 @@ namespace FarmManagementApp.Data
         Sheep
     }
 
+    public interface IAnimal
+    {
+        int LifeSpan { get; }
+        void ProduceProduct();
+    }
+
     public static class AnimalFactory 
     {
         public static IAnimal CreateAnimal(AnimalTypes type) => type switch
@@ -26,15 +32,9 @@ namespace FarmManagementApp.Data
         };
     }
 
-    public interface IAnimal
-    {
-        int LifeSpan { get; }
-        void ProduceProduct();
-    }
-
     public abstract class Animal : IAnimal
     {
-        public virtual int LifeSpan => 1;
+        public virtual int LifeSpan => 0;
         public virtual void ProduceProduct()
         {
             throw new NotImplementedException();
