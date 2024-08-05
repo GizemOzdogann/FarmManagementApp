@@ -6,18 +6,28 @@ using System.Threading.Tasks;
 
 namespace FarmManagementApp.Data
 {
-    internal class AnimalService
+    public class AnimalService
     {
-        // 
-        public AnimalService() 
-        {
-            AnimalFactory.CreateAnimal(AnimalTypes.Cow);
-            AnimalFactory.CreateAnimal(AnimalTypes.Chicken);
-            AnimalFactory.CreateAnimal(AnimalTypes.Sheep);
+        private List<IAnimal> animals = new List<IAnimal>();
 
-            ProductFactory.CreateProduct(ProductTypes.Meat);
-            ProductFactory.CreateProduct(ProductTypes.Milk);
-            ProductFactory.CreateProduct(ProductTypes.Egg);
+        public void AddAnimal(AnimalTypes animalType)
+        {
+            IAnimal animal = AnimalFactory.CreateAnimal(animalType);
+            animals.Add(animal);
+        }
+
+        public void ProduceAllProducts()
+        {
+            foreach (var animal in animals)
+            {
+                animal.ProduceProduct();
+            }
+        }
+
+        public List<IAnimal> GetAnimals()
+        {
+            return animals;
         }
     }
+   
 }

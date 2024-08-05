@@ -169,13 +169,14 @@
             // 
             SaveButton.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SaveButton.ForeColor = SystemColors.WindowFrame;
-            SaveButton.Location = new Point(211, 218);
+            SaveButton.Location = new Point(211, 162);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(115, 29);
             SaveButton.TabIndex = 13;
             SaveButton.Text = "Save";
             SaveButton.TextAlign = ContentAlignment.BottomCenter;
             SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += SaveButton_Click;
             // 
             // AddNewAnimal
             // 

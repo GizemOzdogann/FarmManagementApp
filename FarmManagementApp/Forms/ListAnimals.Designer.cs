@@ -11,6 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -28,12 +29,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ListAnimals";
+            dataGridViewAnimals = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAnimals).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridViewAnimals
+            // 
+            dataGridViewAnimals.AccessibleRole = AccessibleRole.List;
+            dataGridViewAnimals.BackgroundColor = SystemColors.ButtonFace;
+            dataGridViewAnimals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAnimals.Location = new Point(12, 47);
+            dataGridViewAnimals.Name = "dataGridViewAnimals";
+            dataGridViewAnimals.RowHeadersWidth = 51;
+            dataGridViewAnimals.Size = new Size(776, 391);
+            dataGridViewAnimals.TabIndex = 0;
+            // 
+            // ListAnimals
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dataGridViewAnimals);
+            Name = "ListAnimals";
+            Text = "List of Animals";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAnimals).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridViewAnimals;
+
+         }
     }
 }

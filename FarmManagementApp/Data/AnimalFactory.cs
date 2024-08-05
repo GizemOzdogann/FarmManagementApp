@@ -37,7 +37,8 @@ namespace FarmManagementApp.Data
         public virtual int LifeSpan => 0;
         public virtual void ProduceProduct()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Cow produces Milk and Meat.");
+
         }
     }
 

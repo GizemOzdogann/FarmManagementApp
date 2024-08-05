@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarmManagementApp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,24 +14,22 @@ namespace FarmManagementApp.Forms
 {
     public partial class AddNewAnimal : Form
     {
+        public AnimalTypes SelectedAnimalType { get; private set; }
+
+
+        private AnimalService animalService = new AnimalService();
+
         public AddNewAnimal()
         {
             InitializeComponent();
-            InitializeAnimalPickComboBox();
-            //InitializeBreedPickComboBox();
-
         }
+
         private void InitializeAnimalPickComboBox()
         {
-            AnimalPickComboBox.Items.AddRange(new[] { "Cow", "Sheep", "Chicken" });
+            AnimalPickComboBox.DataSource = Enum.GetValues(typeof(AnimalTypes));
         }
-        
+
         private void AddNewAnimal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddNewAnimal_Click(object sender, EventArgs e)
         {
 
         }
@@ -40,7 +39,21 @@ namespace FarmManagementApp.Forms
             Application.Exit();
         }
 
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            if (AnimalPickComboBox.SelectedItem is AnimalTypes selectedAnimalType)
+            {
+                SelectedAnimalType = selectedAnimalType; 
+                animalService.AddAnimal(selectedAnimalType);
+                DialogResult = DialogResult.OK;
+                Close();
+                UpdateAnimalList();
+            }
+        }
 
-      
+        private void UpdateAnimalList()
+        {
+
+        }
     }
 }
