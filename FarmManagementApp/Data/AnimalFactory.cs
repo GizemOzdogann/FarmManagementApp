@@ -7,65 +7,53 @@ using System.Xml.Linq;
 
 namespace FarmManagementApp.Data
 {
-    class Program
+
+    public enum AnimalTypes
     {
-        static void Main(string[] args)
-        {
-            Farm farmBarn = new FarmBarn();
-
-            Cow cow = (Cow)farmBarn.OrderAnimal("cow");
-            Chicken chicken = (Chicken)farmBarn.OrderAnimal("chicken");
-            Sheep sheep = (Sheep)farmBarn.OrderAnimal("sheep");
-
-            DisplayProduct(cow.ProduceMilk());
-            DisplayProduct(cow.ProduceMeat());
-
-            DisplayProduct(chicken.ProduceEggs());
-            DisplayProduct(chicken.ProduceMeat());
-
-            DisplayProduct(sheep.ProduceMeat());
-        }
-        static void DisplayProduct(IProduct product)
-        {
-            Console.WriteLine($"{product.Quantity} units of {product.ProductType} produced.");
-        }
-    }
-    public abstract class Farm
-    {
-        protected abstract IAnimal CreateAnimal(string type);
-
-        public IAnimal OrderAnimal(string type)
-        {
-            IAnimal animal = CreateAnimal(type);
-            animal.ProduceProduct();
-            return animal;
-        }
+        Cow, 
+        Chicken,
+        Sheep
     }
 
-    public class FarmBarn : Farm
+    public enum ProductTypes
     {
-        protected override IAnimal CreateAnimal(string type)
+        Egg,
+        Meat,
+        Milk
+    }
+    public static class AnimalFactory 
+    {
+        public static IAnimal CreateAnimal(AnimalTypes type)
         {
             return type switch
             {
-                "cow" => new Cow("Cow"),
-                "chicken" => new Chicken("chicken"),
-                "sheep" => new Sheep("sheep"),
+                AnimalTypes.Cow => new Cow(),
+                AnimalTypes.Chicken => new Chicken(),
+                AnimalTypes.Sheep => new Sheep(),
                 _ => throw new ArgumentException("Invalid Animal Type", nameof(type)),
             };
+        }
+
+    }
+
+    public abstract class Animal : IAnimal
+    {
+        public virtual int LifeSpan => 1;
+        public virtual void ProduceProduct()
+        {
+            throw new NotImplementedException();
         }
     }
 
     #region Interfaces
     public interface IAnimal
     {
-        string Name { get; }
         void ProduceProduct();
     }
     public interface IProduct
     {
-        string ProductType { get; }
-        int Quantity { get; }
+        ProductTypes Type { get; }
+        int Price { get; }
     }
     #endregion Interfaces
 
@@ -73,48 +61,51 @@ namespace FarmManagementApp.Data
 
     public class Meat : IProduct
     {
-        public string ProductType { get; private set; }
-        public int Quantity { get; private set; }
+        public ProductTypes Type { get; set; }
+        public int Price { get;  set; }
 
-        public Meat(int quantity)
+        public Meat(int price)
         {
-            ProductType = "Meat";
-            Quantity = quantity;
+            Type = ProductTypes.Meat;
+            Price = price;
         }
 
         public void CreateProduct()
         {
-            Console.WriteLine(nameof(ProductType), "Produced");
+            Console.WriteLine(nameof(Type), "Produced");
         }
     }
     public class Milk : IProduct
     {
-        public string ProductType { get; set; }
-        public int Quantity { get; set; } 
-        public Milk(int quantity)
+        public ProductTypes Type { get; set; }
+        public int Price { get; set; } 
+        public Milk(int price)
         {
-            ProductType = "Milk";
-            Quantity = quantity;
+            Type = ProductTypes.Milk;
+            Price = price;
         }
 
         public void CreateProduct()
         {
-            Console.WriteLine(nameof(ProductType), "Produced");
+            Console.WriteLine(nameof(Type), "Produced");
         }
     }
     public class Egg : IProduct
     {
-        public string ProductType { get; private set; }
-        public int Quantity { get; private set; }
-        public Egg(int quantity)
+        public ProductTypes Type {get; set;} 
+        public int Price { get; private set; }
+
+
+        public Egg(int price) 
         {
-            ProductType = "Egg";
-            Quantity = quantity;
+            
+            Price = price;
+            Type = ProductTypes.Egg;
         }
 
         public void CreateProduct()
         {
-            Console.WriteLine(nameof(ProductType), "Produced");
+            Console.WriteLine(nameof(Type), "Produced");
         }
     }
 
@@ -122,13 +113,9 @@ namespace FarmManagementApp.Data
 
     #region Animals
 
-    public class Cow : IAnimal
+    public class Cow : Animal
     {
-        public string Name { get;  set; }
-        public Cow(string name)
-        {
-            Name = name;
-        }
+        public override int LifeSpan => base.LifeSpan;
 
         public IProduct ProduceMilk()
         {
@@ -139,18 +126,14 @@ namespace FarmManagementApp.Data
         {
             return new Meat(new Random().Next(20, 50)); 
         }
-        public void ProduceProduct()
+        public override void ProduceProduct()
         {
             Console.WriteLine("Cow produces Milk and Meat.");
         }
     }
-    public class Chicken : IAnimal
+    public class Chicken : Animal
     {
-        public string Name { get; set; }
-        public Chicken(string name) 
-        {
-            Name = name;
-        }
+        
         public IProduct ProduceEggs()
         {
             return new Egg(new Random().Next(1, 10)); 
@@ -159,30 +142,24 @@ namespace FarmManagementApp.Data
         {
             return new Meat(new Random().Next(5, 15)); 
         }
-        public void ProduceProduct()
+        public override void ProduceProduct()
         {
             Console.WriteLine("Chicken produces Eggs and Meat.");
         }
     }
-    public class Sheep : IAnimal
+    public class Sheep : Animal
     {
-        public string Name { get; set; }
-        public Sheep(string name)
-        {
-            Name = name;
-        }
+        
         public IProduct ProduceMeat()
         {
             return new Meat(new Random().Next(15, 30)); 
         }
-        public void ProduceProduct()
+        public override void ProduceProduct()
         {
-            Console.WriteLine("Sheep produces Meat and possibly Wool.");
+            Console.WriteLine("Sheep produces Meat.");
         }
     }
 
     #endregion Animals
-
-
 
 }

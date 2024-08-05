@@ -1,3 +1,4 @@
+using FarmManagementApp.Data;
 using FarmManagementApp.Forms;
 
 namespace FarmManagementApp
@@ -14,5 +15,6 @@ namespace FarmManagementApp
             //Application.Run(new MainForm());
             Application.Run(new AddNewAnimal());
         }
+     
     }
 }
