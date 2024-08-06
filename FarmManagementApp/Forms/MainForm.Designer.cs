@@ -47,6 +47,7 @@ namespace FarmManagementApp
             logoLabel = new Label();
             colorDialog1 = new ColorDialog();
             notifyIcon1 = new NotifyIcon(components);
+            MainPanel = new Panel();
             sidePanel.SuspendLayout();
             salesSubPanel.SuspendLayout();
             productsSubPanel.SuspendLayout();
@@ -71,7 +72,7 @@ namespace FarmManagementApp
             sidePanel.Location = new Point(0, 0);
             sidePanel.Margin = new Padding(4, 3, 4, 3);
             sidePanel.Name = "sidePanel";
-            sidePanel.Size = new Size(211, 551);
+            sidePanel.Size = new Size(211, 463);
             sidePanel.TabIndex = 0;
             // 
             // salesSubPanel
@@ -82,7 +83,7 @@ namespace FarmManagementApp
             salesSubPanel.Location = new Point(0, 328);
             salesSubPanel.Margin = new Padding(4, 3, 4, 3);
             salesSubPanel.Name = "salesSubPanel";
-            salesSubPanel.Size = new Size(211, 98);
+            salesSubPanel.Size = new Size(190, 98);
             salesSubPanel.TabIndex = 10;
             // 
             // SellProductsButton
@@ -97,7 +98,7 @@ namespace FarmManagementApp
             SellProductsButton.Margin = new Padding(4, 3, 4, 3);
             SellProductsButton.Name = "SellProductsButton";
             SellProductsButton.Padding = new Padding(32, 0, 0, 0);
-            SellProductsButton.Size = new Size(211, 48);
+            SellProductsButton.Size = new Size(190, 48);
             SellProductsButton.TabIndex = 7;
             SellProductsButton.Text = "Sell Products";
             SellProductsButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -116,9 +117,9 @@ namespace FarmManagementApp
             CashStatusButton.Margin = new Padding(4, 3, 4, 3);
             CashStatusButton.Name = "CashStatusButton";
             CashStatusButton.Padding = new Padding(32, 0, 0, 0);
-            CashStatusButton.Size = new Size(211, 48);
+            CashStatusButton.Size = new Size(190, 48);
             CashStatusButton.TabIndex = 6;
-            CashStatusButton.Text = "Cash Status";
+            CashStatusButton.Text = "Cash Status     ";
             CashStatusButton.TextAlign = ContentAlignment.MiddleLeft;
             CashStatusButton.UseVisualStyleBackColor = true;
             CashStatusButton.Click += CashStatusButton_Click;
@@ -134,7 +135,7 @@ namespace FarmManagementApp
             SalesButton.Margin = new Padding(4, 3, 4, 3);
             SalesButton.Name = "SalesButton";
             SalesButton.Padding = new Padding(12, 0, 0, 0);
-            SalesButton.Size = new Size(211, 48);
+            SalesButton.Size = new Size(190, 48);
             SalesButton.TabIndex = 9;
             SalesButton.Text = "Sales";
             SalesButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -148,7 +149,7 @@ namespace FarmManagementApp
             productsSubPanel.Location = new Point(0, 232);
             productsSubPanel.Margin = new Padding(4, 3, 4, 3);
             productsSubPanel.Name = "productsSubPanel";
-            productsSubPanel.Size = new Size(211, 48);
+            productsSubPanel.Size = new Size(190, 48);
             productsSubPanel.TabIndex = 8;
             // 
             // ShowProductsButton
@@ -163,7 +164,7 @@ namespace FarmManagementApp
             ShowProductsButton.Margin = new Padding(4, 3, 4, 3);
             ShowProductsButton.Name = "ShowProductsButton";
             ShowProductsButton.Padding = new Padding(32, 0, 0, 0);
-            ShowProductsButton.Size = new Size(211, 48);
+            ShowProductsButton.Size = new Size(190, 48);
             ShowProductsButton.TabIndex = 5;
             ShowProductsButton.Text = "Show Product List";
             ShowProductsButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -181,7 +182,7 @@ namespace FarmManagementApp
             ProductsButton.Margin = new Padding(4, 3, 4, 3);
             ProductsButton.Name = "ProductsButton";
             ProductsButton.Padding = new Padding(12, 0, 0, 0);
-            ProductsButton.Size = new Size(211, 48);
+            ProductsButton.Size = new Size(190, 48);
             ProductsButton.TabIndex = 7;
             ProductsButton.Text = "Products";
             ProductsButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -196,7 +197,7 @@ namespace FarmManagementApp
             animalsSubPanel.Location = new Point(0, 86);
             animalsSubPanel.Margin = new Padding(4, 3, 4, 3);
             animalsSubPanel.Name = "animalsSubPanel";
-            animalsSubPanel.Size = new Size(211, 98);
+            animalsSubPanel.Size = new Size(190, 98);
             animalsSubPanel.TabIndex = 6;
             // 
             // AddAnimalsButton
@@ -211,7 +212,7 @@ namespace FarmManagementApp
             AddAnimalsButton.Margin = new Padding(4, 3, 4, 3);
             AddAnimalsButton.Name = "AddAnimalsButton";
             AddAnimalsButton.Padding = new Padding(32, 0, 0, 0);
-            AddAnimalsButton.Size = new Size(211, 50);
+            AddAnimalsButton.Size = new Size(190, 50);
             AddAnimalsButton.TabIndex = 6;
             AddAnimalsButton.Text = "Add New Animal";
             AddAnimalsButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -230,7 +231,7 @@ namespace FarmManagementApp
             ListAnimalsButton.Margin = new Padding(4, 3, 4, 3);
             ListAnimalsButton.Name = "ListAnimalsButton";
             ListAnimalsButton.Padding = new Padding(32, 0, 0, 0);
-            ListAnimalsButton.Size = new Size(211, 48);
+            ListAnimalsButton.Size = new Size(190, 48);
             ListAnimalsButton.TabIndex = 5;
             ListAnimalsButton.Text = "List Animals";
             ListAnimalsButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -243,11 +244,11 @@ namespace FarmManagementApp
             exitButton.FlatAppearance.BorderSize = 0;
             exitButton.FlatStyle = FlatStyle.Flat;
             exitButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            exitButton.Location = new Point(0, 511);
+            exitButton.Location = new Point(0, 426);
             exitButton.Margin = new Padding(4, 3, 4, 3);
             exitButton.Name = "exitButton";
             exitButton.Padding = new Padding(12, 0, 0, 0);
-            exitButton.Size = new Size(211, 40);
+            exitButton.Size = new Size(190, 40);
             exitButton.TabIndex = 4;
             exitButton.Text = "Exit";
             exitButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -266,7 +267,7 @@ namespace FarmManagementApp
             AnimalsButton.Margin = new Padding(4, 3, 4, 3);
             AnimalsButton.Name = "AnimalsButton";
             AnimalsButton.Padding = new Padding(12, 0, 0, 0);
-            AnimalsButton.Size = new Size(211, 48);
+            AnimalsButton.Size = new Size(190, 48);
             AnimalsButton.TabIndex = 1;
             AnimalsButton.Text = "Animals";
             AnimalsButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -280,7 +281,7 @@ namespace FarmManagementApp
             logoPanel.Location = new Point(0, 0);
             logoPanel.Margin = new Padding(4, 3, 4, 3);
             logoPanel.Name = "logoPanel";
-            logoPanel.Size = new Size(211, 38);
+            logoPanel.Size = new Size(190, 38);
             logoPanel.TabIndex = 0;
             // 
             // logoLabel
@@ -302,17 +303,26 @@ namespace FarmManagementApp
             // 
             notifyIcon1.Text = "notifyIcon1";
             // 
+            // MainPanel
+            // 
+            MainPanel.ForeColor = SystemColors.ControlText;
+            MainPanel.Location = new Point(218, 12);
+            MainPanel.Name = "MainPanel";
+            MainPanel.Size = new Size(662, 439);
+            MainPanel.TabIndex = 1;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1067, 551);
+            ClientSize = new Size(892, 463);
+            Controls.Add(MainPanel);
             Controls.Add(sidePanel);
             Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.Window;
             Margin = new Padding(4, 3, 4, 3);
             Name = "MainForm";
-            StartPosition = FormStartPosition.WindowsDefaultBounds;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Farm Manager";
             Load += MainForm_Load;
             Click += MainForm_Load;
@@ -344,5 +354,6 @@ namespace FarmManagementApp
         private Label logoLabel;
         private ColorDialog colorDialog1;
         private NotifyIcon notifyIcon1;
+        private Panel MainPanel;
     }
 }

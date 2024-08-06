@@ -17,8 +17,11 @@ namespace FarmManagementApp.Data
 
     public interface IAnimal
     {
-        int LifeSpan { get; }
-        void ProduceProduct();
+        bool Gender { get; set; }
+        int Age { get; set; }
+        int LifeSpan { get;}
+        public void ProduceProduct();
+         
     }
 
     public static class AnimalFactory 
@@ -34,18 +37,23 @@ namespace FarmManagementApp.Data
 
     public abstract class Animal : IAnimal
     {
+
+        public int Age { get; set; }
         public virtual int LifeSpan => 0;
+
+        public bool Gender { get ; set ; }
+
         public virtual void ProduceProduct()
         {
-            Console.WriteLine("Cow produces Milk and Meat.");
-
         }
+        
     }
 
     #region Animals
 
     public class Cow : Animal
     {
+
         public override int LifeSpan => 20;
 
         public IProduct ProduceMilk()
