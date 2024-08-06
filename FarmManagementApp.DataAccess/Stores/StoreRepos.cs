@@ -10,5 +10,8 @@ namespace FarmManagementApp.DataAccess.Stores
     internal class StoreRepos
     {
         List<string> animalList = new();
+        List<string> productList = new();
     }
+
+
 }
